@@ -1,0 +1,29 @@
+rrbot:
+  # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50  
+  
+  # Position Controllers ---------------------------------------
+  # joint1_position_controller:
+  #   type: position_controllers/JointPositionController
+  #   joint: joint1
+  #   pid: {p: 100.0, i: 0.01, d: 10.0}
+  # joint2_position_controller:
+  #   type: position_controllers/JointPositionController
+  #   joint: joint2
+  #   pid: {p: 100.0, i: 0.01, d: 10.0}
+
+  # Joint Trajectory Controllers -------------------------------
+  ### Use PositionJointInterface in gazebo
+  ### -      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  ### +      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  rrbot_arm_controller:
+    type: position_controllers/JointTrajectoryController
+    joints:
+      - joint1
+      - joint2
+gazebo_ros_control: ## This is required for setting PID gains inside gazebo_ros_control
+  pid_gains:
+    joint1: {p: 100.0, i: 0.00, d: 10.0}
+    joint2: {p: 100.0, i: 0.00, d: 10.0}

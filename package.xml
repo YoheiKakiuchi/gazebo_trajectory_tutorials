@@ -1,0 +1,28 @@
+<package>
+  <name>gazebo_trajectory_tutorials</name>
+  <version>0.0.0</version>
+  <description>Interface for using ROS/roseus with the <a href="http://gazebosim.org/">Gazebo</a> simulator.</description>
+
+  <maintainer email="youhei@jsk.imi.i.u-tokyo.ac.jp">Yohei Kakiuchi</maintainer>
+
+  <license>BSD, Apache 2.0</license>
+
+  <!--url type="website"></url-->
+  <!--url type="bugtracker"></url-->
+  <!--url type="repository"></url-->
+
+  <author email="youhei@jsk.imi.i.u-tokyo.ac.jp">Yohei Kakiuchi</author>>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <!-- require: https://github.com/ros-simulation/gazebo_ros_demos -->
+  <build_depend>rrbot_description</build_depend>
+  <build_depend>euscollada</build_depend>
+  
+  <run_depend>rrbot_control</run_depend>
+  <run_depend>rrbot_gazebo</run_depend>
+  <run_depend>pr2eus</run_depend>
+
+  <export>
+  </export>
+</package>
