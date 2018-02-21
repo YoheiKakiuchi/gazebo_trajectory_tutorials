@@ -18,6 +18,7 @@
   <!-- require: https://github.com/ros-simulation/gazebo_ros_demos -->
   <build_depend>rrbot_description</build_depend>
   <build_depend>euscollada</build_depend>
+  <build_depend>xacro</build_depend>
   
   <run_depend>rrbot_control</run_depend>
   <run_depend>rrbot_gazebo</run_depend>
